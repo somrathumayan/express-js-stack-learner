@@ -17,7 +17,16 @@ app.get("/", (req, res) => {
 })
 
 app.get("/about", (req, res) => {
-    res.send("Hello about");
+    // res.send("Hello about");
+    fs.readFile("./pages/about.html", (err, data) => {
+        if(err){
+            console.log("Error Data");
+            res.send(`<h1>Something Wrong</h1>`);
+        } else{
+            res.write(data);
+            res.end();
+        }
+    })
 })
 
 app.get("/contact", (req, res) => {
@@ -25,7 +34,17 @@ app.get("/contact", (req, res) => {
 })
 
 app.get("/blog", (req, res) => {
-    res.send("Hello blog");
+    // res.send("Hello blog");
+    fs.readFile("./pages/blog.html", (err, data) => {
+        if(err){
+            console.log("Error");
+            res.send(`Something went wrong on blog`);
+        }
+        else {
+            res.write(data);
+            res.end();
+        }
+    })
 })
 
 app.listen(8000, () => {

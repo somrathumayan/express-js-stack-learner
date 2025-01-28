@@ -1,9 +1,18 @@
 const express = require("express");
+const fs = require("fs");
 
 const app = express();
 
 app.get("/", (req, res) => {
-    res.send("Hello World");
+    fs.readFile("./pages/index.html", (err, data) => {
+        if(err){
+            console.log("error");
+            res.send(`<h1>Something went wrong</h1>`);
+        } else{
+            res.write(data);
+        }
+    });
+
 })
 
 app.get("/about", (req, res) => {

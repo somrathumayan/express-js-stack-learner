@@ -1,0 +1,23 @@
+{
+  "name": "express-js-stack-learner",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/somrathumayan/express-js-stack-learner.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/somrathumayan/express-js-stack-learner/issues"
+  },
+  "homepage": "https://github.com/somrathumayan/express-js-stack-learner#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

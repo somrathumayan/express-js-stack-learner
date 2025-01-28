@@ -10,6 +10,7 @@ app.get("/", (req, res) => {
             res.send(`<h1>Something went wrong</h1>`);
         } else{
             res.write(data);
+            res.end()
         }
     });
 
